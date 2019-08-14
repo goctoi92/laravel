@@ -1,0 +1,133 @@
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1170px
+);
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 0.3125rem;
+$spacers: (
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10),
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    13: ($spacer * 13),
+    14: ($spacer * 14),
+    15: ($spacer * 15),
+    16: ($spacer * 16),
+    17: ($spacer * 17),
+    18: ($spacer * 18),
+    19: ($spacer * 19),
+    20: ($spacer * 20),
+);
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-primary-name:         'Helvetica';
+$font-primary:              $font-primary-name, sans-serif;
+$font-family-base:          $font-primary;
+
+// Font size base for "rem to pixel" calculator mixin
+$font-size-px-base:         16px;
+$font-size-base:            1rem;
+$fa-font-path :             "/fonts";
+$padding-size-base:         0.09375rem;
+$headings-font-weight:      600;
+
+$h1-font-size:                to-rem(32px);
+$h2-font-size:                to-rem(28px);
+$h3-font-size:                to-rem(20px);
+//$h4-font-size:                $font-size-base * 1.5 !default;
+//$h5-font-size:                $font-size-base * 1.25 !default;
+//$h6-font-size:                $font-size-base !default;
+
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+
+//
+// Color system
+//
+
+$brand-primary:          #209ad6;
+$brand-secondary:        #1A3465;
+$brand-danger:           #ed1c24;
+$brand-info:             #006D98;
+
+$text-color:             #FFFFFF;
+$arrow-dropdown-color:   #BFC0BF;
+$text-topbar-color:            #727272;
+
+//theme color
+$primary:   $brand-primary;
+$secondary: $brand-secondary;
+$danger:    $brand-danger;
+$info:      $brand-info;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   #fff;
+$body-color:                #272726;
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:                $brand-primary;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+$btn-font-size:               to-rem(18px);
+
+$btn-border-radius:           0;
+$btn-border-radius-lg:        0;
+$btn-border-radius-sm:        0;
+
+$btn-border-radius:           3px;
+$btn-border-radius-lg:        3px;
+$btn-border-radius-sm:        3px;

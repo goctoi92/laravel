@@ -1,0 +1,41 @@
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function to-rem($pixels, $return-with-rem: true) {
+    //base px unit to rem
+    $base-unit: 16;
+
+    @if global-variable-exists(font-size-px-base) {
+        $base-unit: strip-unit($font-size-px-base);
+    }
+
+    $value: strip-unit($pixels) / $base-unit;
+
+    @if $return-with-rem {
+        @return $value + rem;
+    }
+
+    @return $value;
+}
+
+@mixin rem-font-size($pixels, $font-weight: null, $line-height: null) {
+    font-size: strip-unit($pixels) + px;
+    font-size: to-rem($pixels);
+
+    @if $font-weight != null {
+        font-weight: $font-weight;
+    }
+
+    @if $line-height != null {
+        line-height: to-rem($line-height);
+    }
+}
+
+@mixin st-transform-translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
