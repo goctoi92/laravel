@@ -1,6 +1,12 @@
 {
+    "/js/admin/main.js": "/js/admin/main.js",
+    "/js/admin/myscript.js": "/js/admin/myscript.js",
     "/js/app.js": "/js/app.js",
+    "/js/application/index.page.js": "/js/application/index.page.js",
+    "/js/bootstrap.js": "/js/bootstrap.js",
     "/css/app.css": "/css/app.css",
     "/css/application/index.css": "/css/application/index.css",
-    "/js/application/index.page.js": "/js/application/index.page.js"
+    "/css/admin/theme.css": "/css/admin/theme.css",
+    "/js/jquery-3.2.1.min.js": "/js/jquery-3.2.1.min.js",
+    "/js/animsition.min.js": "/js/animsition.min.js"
 }

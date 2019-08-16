@@ -15,11 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'khoa-hoc'],function(){
-    Route::get('/index','KhoaHocController@indexAction');
-    Route::get('/php','KhoaHocController@phpAction');
-    Route::get('/mobile','KhoaHocController@mobileAction');
+Route::group(['prefix'=>'admin'],function(){
+    Route::group(['prefix'=>'category'],function(){
+        Route::get('/','Auth\CategoryController@indexAction');
+        Route::get('/list',['as' => 'admin.category.list','uses' => 'Auth\CategoryController@indexAction']);
+
+        Route::get('/add',['as' => 'admin.category.getAdd','uses' => 'Auth\CategoryController@addAction']);
+        Route::post('/add',['as' => 'admin.category.postAdd','uses' => 'Auth\CategoryController@postAddAction']);
+    });
+    Route::get('/','Auth\LoginController@indexAction');
+    Route::get('/index','Auth\LoginController@indexAction');
+
 });
-//Route::get('hcminh',['as'=>'hcm',function(){
-//    return 'o o o';
-//}]);
