@@ -1,4 +1,34 @@
-.test {
-  background: #4aa0e6;
+.col-md-4 {
+  flex: 0 0 32.3333333333%;
+  max-width: 32.3333333333%;
+}
+
+.col-md-8 {
+  flex: 0 0 65.6666666667%;
+  max-width: 65.6666666667%;
+}
+
+.row {
+  margin: 0;
+}
+
+.feed-item {
+  margin: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.feed-item .title-news {
+  font-size: 18px;
+}
+
+.feed-item .sort-desc {
+  font-size: 14px;
+}
+
+.feed-item .section-option .source_title {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 1px;
 }
 

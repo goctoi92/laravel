@@ -7,11 +7,26 @@ use App\Categorys;
 class CategoryController extends Controller {
 
     public function indexAction(){
-        return view('admin/category/list');
+        $data = Categorys::select('id','name','parent_id','description')->orderBy('id','DESC')->get()->toArray();
+        return view('admin/category/list')->with('data',$data);
+    }
+
+    public function deleteAction($id){
+        $cate = Categorys::find($id);
+        $cate->delete();
+        return redirect()->route('admin.category.list')
+            ->with(['flash_level'=>'success','flash_message'=>'Delete Success']);
+    }
+
+    public function editAction(){
+    }
+
+    public function postEditAction(){
     }
 
     public function addAction(){
-        return view('admin/category/add');
+        $data = Categorys::select('id','name','parent_id')->get()->toArray();
+        return view('admin/category/add')->with('parent',$data);
     }
 
     public function postAddAction(CateRequest $request){

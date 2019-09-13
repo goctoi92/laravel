@@ -10,12 +10,11 @@ mix.copyDirectory('resources/assets/images', 'public/images');
 mix.copyDirectory('resources/assets/fonts', 'public/fonts');
 mix.copyDirectory('resources/js/jquery-3.2.1.min.js', 'public/js');
 mix.copyDirectory('resources/js/animsition.min.js', 'public/js');
-mix.js(dirJs + 'bootstrap.js', dirOutJs);
 
 
 /* -------------CAU HINH CHO APPLICATION------------------ */
 
-mix.js(dirJs + 'app.js', dirOutJs)
+mix.react(dirJs + 'app.js', dirOutJs)
     .sass(dirScss + 'app.scss', dirOutScss);
 
 mix.js(dirJs + 'page/index.page.js', dirOutJs + 'application')

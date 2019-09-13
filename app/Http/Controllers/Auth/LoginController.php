@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -39,5 +42,17 @@ class LoginController extends Controller
 
     public function indexAction(){
         return view('admin/login');
+    }
+
+    public function loginPostAction(UserRequest $request){
+        $auth = [
+            'email' => $request->input('txt_email'),
+            'password' => $request->input('txt_password')
+        ];
+        if (Auth::attempt($auth)){
+            return redirect()->route('admin.index')->with('user',$this->au);
+        }
+        else
+            return redirect()->route('admin.login.login');
     }
 }

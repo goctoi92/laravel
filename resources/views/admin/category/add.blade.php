@@ -28,17 +28,20 @@
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-1">
-                        <label for="input_alias" class=" form-control-label">Order</label>
+                        <label for="input_order" class=" form-control-label">Order</label>
                     </div>
                     <div class="col-12 col-md-5">
-                        <input type="text" id="input_alias" name="inputOrder" class="form-control">
+                        <input type="text" id="input_order" name="inputOrder" class="form-control">
                     </div>
 
                     <div class="col col-md-1">
-                        <label for="input_alias" class=" form-control-label">Cate Parent</label>
+                        <label for="input_parent" class=" form-control-label">Cate Parent</label>
                     </div>
                     <div class="col-12 col-md-5">
-                        <input type="text" id="input_alias" name="inputParent" class="form-control">
+                        <select name="inputParent" class="form-control">
+                            <option value="0">Select Category Parent</option>
+                            <?php \Lib\Text::cate_parent($parent); ?>
+                        </select>
                     </div>
                 </div>
                 <div class="row form-group">

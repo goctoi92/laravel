@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use \Lib\Text;
 
 class Categorys extends Model
 {
@@ -16,10 +17,13 @@ class Categorys extends Model
         return $this->hasMany('App\Products');
     }
 
+    /**
+     * @param Request $request
+     */
     public function addCate(Request $request){
         $category = new Categorys();
         $category->name = $request->input('inputName');
-        $category->alias = $request->input('inputAlias');
+        $category->alias = \Lib\Text::rewriteTitle($request->input('inputAlias'));
         $category->order = $request->input('inputOrder');
         $category->parent_id = $request->input('inputParent');
         $category->keyword = $request->input('inputKeyword');

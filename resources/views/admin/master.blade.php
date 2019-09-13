@@ -40,13 +40,29 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="chart.html">
-                            <i class="fa fa-bar-chart"></i>Charts</a>
+                    <li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fa fa-list"></i>Category</a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <li>
+                                <a href='{!! route('admin.category.list') !!}'>List</a>
+                            </li>
+                            <li>
+                                <a href="{!! route('admin.category.getAdd') !!}">Add</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="table.html">
-                            <i class="fa fa-table"></i>Tables</a>
+                    <li class="has-sub">
+                        <a class="js-arrow" href="#">
+                            <i class="fa fa-list"></i>User</a>
+                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                            <li>
+                                <a href='{!! route('admin.user.list') !!}'>List</a>
+                            </li>
+                            <li>
+                                <a href="{!! route('admin.user.getAdd') !!}">Add</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="form.html">

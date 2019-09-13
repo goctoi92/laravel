@@ -286,6 +286,7 @@ section {
 @media (min-width: 1200px) {
   .container {
     max-width: 1320px;
+    margin: auto;
   }
 }
 
@@ -358,6 +359,7 @@ section {
 .login-checkbox {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .login-checkbox label input[type=checkbox] {
@@ -376,6 +378,7 @@ section {
 
 .login-form .form-group label {
   display: block;
+  margin-top: 10px;
 }
 
 .login-content {
@@ -482,6 +485,14 @@ section {
 
 .au-btn--green:hover {
   background: #59bd60;
+}
+
+.au-btn--dark {
+  background: #555;
+}
+
+.au-btn--dark:hover {
+  background: #555;
 }
 
 .au-btn-plus {
@@ -611,6 +622,7 @@ section {
   border-color: rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.051);
   color: #999;
+  margin-bottom: 15px;
 }
 
 .form-header2 .au-input::-webkit-input-placeholder {
@@ -647,6 +659,7 @@ section {
   padding: 0 17px;
   border-radius: 3px;
   transition: all 0.5s ease;
+  margin-bottom: 15px;
 }
 
 .au-input--style2 {
@@ -3608,6 +3621,10 @@ section {
   color: #808080;
   text-transform: capitalize;
   font-weight: 400;
+}
+
+.table-data__info .text-danger {
+  color: red;
 }
 
 .table-data__info span a {

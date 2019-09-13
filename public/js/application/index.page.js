@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,11 +93,27 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
 
 var index =
 /*#__PURE__*/
@@ -124,14 +140,50 @@ new index();
 
 /***/ }),
 
-/***/ 2:
-/*!***********************************************!*\
-  !*** multi ./resources/js/page/index.page.js ***!
-  \***********************************************/
+/***/ "./resources/sass/admin/theme.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/admin/theme.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/page/index.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/page/index.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!********************************************************************************************************************************************!*\
+  !*** multi ./resources/js/page/index.page.js ./resources/sass/app.scss ./resources/sass/page/index.scss ./resources/sass/admin/theme.scss ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\page\index.page.js */"./resources/js/page/index.page.js");
+__webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\page\index.page.js */"./resources/js/page/index.page.js");
+__webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\index.scss */"./resources/sass/page/index.scss");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\admin\theme.scss */"./resources/sass/admin/theme.scss");
 
 
 /***/ })

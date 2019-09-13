@@ -258,6 +258,7 @@ section {
 @media (min-width: 1200px) {
     .container {
         max-width: 1320px;
+        margin: auto;
     }
 }
 
@@ -328,16 +329,9 @@ section {
 }
 
 .login-checkbox {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-top: 10px;
 label input[type="checkbox"] {
     margin-right: 8px;
 }
@@ -360,6 +354,7 @@ label input[type="checkbox"] {
 
 .login-form .form-group label {
     display: block;
+    margin-top: 10px;
 }
 
 .login-content {
@@ -466,6 +461,13 @@ i {
 &:hover {
      background: #59bd60;
  }
+}
+
+.au-btn--dark {
+    background: #555;
+    &:hover {
+        background: #555;
+    }
 }
 
 .au-btn-plus {
@@ -656,6 +658,7 @@ i {
     border-color: rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.051);
     color: #999;
+    margin-bottom: 15px;
 &::-webkit-input-placeholder {
      /* WebKit, Blink, Edge */
      color: #999;
@@ -694,6 +697,7 @@ i {
     -o-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    margin-bottom: 15px;
 }
 
 .au-input--style2 {
@@ -4130,6 +4134,9 @@ h6 {
     color: #808080;
     text-transform: capitalize;
     font-weight: 400;
+}
+.text-danger{
+    color: red;
 }
 span a {
     font-size: 12px;

@@ -13,7 +13,7 @@
     <title>Login</title>
 
     <!-- Main CSS-->
-    <link href="css/admin/theme.css" rel="stylesheet" media="all">
+    <link href="/css/admin/theme.css" rel="stylesheet" media="all">
 
 </head>
 
@@ -25,22 +25,23 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/admin/logo.png" alt="CoolAdmin">
+                                <img src="/images/admin/logo.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form action="{!! route('admin.login.loginPostAdd') !!}" method="post">
+                                {!! csrf_field() !!}
                                 <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    <input class="au-input au-input--full" type="email" name="txt_email" placeholder="Email">
+                                    <span style="color: red">{!! $errors->first('txt_email') !!}</span>
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                    <input class="au-input au-input--full" type="password" name="txt_password" placeholder="Password">
+                                    <span style="color: red">{!! $errors->first('txt_password') !!}</span>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Remember Me
+                                        <input type="checkbox" name="cbx_remember">Remember Me
                                     </label>
                                     <label>
                                         <a href="#">Forgotten Password?</a>
@@ -62,7 +63,7 @@
 
     </div>
     <!-- Main JS-->
-    <script src="js/admin/main.js"></script>
+    <script src="/js/admin/main.js"></script>
 
 </body>
 
