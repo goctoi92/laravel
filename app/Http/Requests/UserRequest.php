@@ -32,7 +32,7 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
-            'txt_email.required' => 'Password khong de trong',
+            'txt_email.required' => 'Email khong de trong',
             'txt_password.required' => 'Password khong de trong'
         ];
     }

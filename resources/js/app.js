@@ -13,3 +13,4 @@ require('./bootstrap');
  */
 
 require('./components/Item_News');
+require('./components/Search_Section');

@@ -15,5 +15,10 @@ class AdminController extends Controller
     public function indexAction(){
         return view('admin.admin');
     }
+    public function logoutAction()
+    {
+        Auth::logout();
+        return redirect()->route('login.login');
+    }
 
 }

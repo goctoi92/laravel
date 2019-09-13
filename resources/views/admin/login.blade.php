@@ -8,11 +8,13 @@
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
+    <meta name="csrf-token" content="{!! csrf_token() !!}">
 
     <!-- Title Page-->
     <title>Login</title>
 
     <!-- Main CSS-->
+    <link href="/css/app.css" rel="stylesheet" media="all">
     <link href="/css/admin/theme.css" rel="stylesheet" media="all">
 
 </head>
@@ -24,12 +26,12 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
+                            <a>
                                 <img src="/images/admin/logo.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="{!! route('admin.login.loginPostAdd') !!}" method="post">
+                            <form action="{!! route('login.loginPostAdd') !!}" method="post">
                                 {!! csrf_field() !!}
                                 <div class="form-group">
                                     <input class="au-input au-input--full" type="email" name="txt_email" placeholder="Email">
@@ -63,7 +65,7 @@
 
     </div>
     <!-- Main JS-->
-    <script src="/js/admin/main.js"></script>
+    <script src="/js/app.js"></script>
 
 </body>
 

@@ -98,6 +98,17 @@
                         <div class="header-button">
                             <div class="noti-wrap">
                                 <div class="noti__item js-item-menu">
+                                    <i class="fa fa-user"></i>
+                                    <div class="email-dropdown js-dropdown">
+                                        <div class="email__item">
+                                            <a>My Account</a>
+                                        </div>
+                                        <div class="email__item">
+                                            <a href="{!! route('logout') !!}">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti__item js-item-menu">
                                     <i class="fa fa-comment"></i>
                                     <span class="quantity">1</span>
                                     <div class="mess-dropdown js-dropdown">
@@ -168,6 +179,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
 
                         </div>

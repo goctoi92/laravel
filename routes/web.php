@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','middleware' => 'auth'],function(){
+    Route::get('/',['as' => 'admin.index','uses' => 'Auth\AdminController@indexAction']);
+    Route::get('/logout',['as' => 'logout','uses' => 'Auth\AdminController@logoutAction']);
+
     Route::group(['prefix'=>'category'],function(){
         Route::get('/','Auth\CategoryController@indexAction');
         Route::get('/list',['as' => 'admin.category.list','uses' => 'Auth\CategoryController@indexAction']);
@@ -24,6 +27,7 @@ Route::group(['prefix'=>'admin'],function(){
         Route::post('/add',['as' => 'admin.category.postAdd','uses' => 'Auth\CategoryController@postAddAction']);
 
         Route::get('/delete/{id}',['as' => 'admin.category.getDelete','uses' => 'Auth\CategoryController@deleteAction']);
+
         Route::get('/edit/{id}',['as' => 'admin.category.getEdit','uses' => 'Auth\CategoryController@editAction']);
         Route::post('/edit/{id}',['as' => 'admin.category.postEdit','uses' => 'Auth\CategoryController@postEditAction']);
     });
@@ -36,12 +40,13 @@ Route::group(['prefix'=>'admin'],function(){
         Route::post('/add',['as' => 'admin.user.postAdd','uses' => 'Auth\RegisterController@postAddAction']);
 
         Route::get('/delete/{id}',['as' => 'admin.user.getDelete','uses' => 'Auth\UserController@deleteAction']);
+
         Route::get('/edit/{id}',['as' => 'admin.user.getEdit','uses' => 'Auth\UserController@editAction']);
         Route::post('/edit/{id}',['as' => 'admin.user.postEdit','uses' => 'Auth\UserController@postEditAction']);
     });
 
-    Route::get('/',['as' => 'admin.index','uses' => 'Auth\AdminController@indexAction']);
-    Route::get('/login',['as' => 'admin.login.login','uses' => 'Auth\LoginController@indexAction']);
-    Route::post('/login',['as' => 'admin.login.loginPostAdd','uses' => 'Auth\LoginController@loginPostAction']);
-
 });
+
+Route::get('/login',['as' => 'login.login','uses' => 'Auth\LoginController@indexAction']);
+Route::post('/login',['as' => 'login.loginPostAdd','uses' => 'Auth\LoginController@loginPostAction']);
+

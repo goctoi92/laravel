@@ -41,7 +41,7 @@ class LoginController extends Controller
     }
 
     public function indexAction(){
-        return view('admin/login');
+        return view('admin.login');
     }
 
     public function loginPostAction(UserRequest $request){
@@ -50,9 +50,9 @@ class LoginController extends Controller
             'password' => $request->input('txt_password')
         ];
         if (Auth::attempt($auth)){
-            return redirect()->route('admin.index')->with('user',$this->au);
+            return redirect()->route('admin.index');
         }
         else
-            return redirect()->route('admin.login.login');
+            return redirect()->back()->with('status', 'Email hoặc Password không chính xác');
     }
 }

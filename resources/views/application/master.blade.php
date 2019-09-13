@@ -21,20 +21,7 @@
 
 <body>
     <div class="container">
-        <div class="row section-search">
-            <div class="col-md-12">
-                <div class="input-group mb-2">
-                    <form>
-                        <input type="text" class="form-control" id="txt-search" placeholder="Tìm bài viết!">
-                        <input type="hidden" name="token" value="{!!csrf_token()!!}">
-                        {{ csrf_field() }}
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fa fa-search"></i></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <div id="section-search" class="row section-search"></div>
         <div class="section-content">
             @yield('content')
         </div>

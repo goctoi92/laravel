@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CateRequest;
 use App\Categorys;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller {
 
