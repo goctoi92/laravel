@@ -84,12 +84,16 @@ class Text {
         $text = strtolower($text);
         return $text;
     }
-    static function cate_parent($data,$parent = 0, $str = ''){
+
+    static function cate_parent($data,$parent = 0, $str = '',$select = 0){
         foreach ($data as $item){
             $name = $item['name'];
             $id = $item['id'];
             if ($item['parent_id'] == $parent){
-                echo "<option value='$id'>$str $name</option>";
+                if ($select != 0 && $id == $select)
+                    echo "<option selected='selected' value='$id'>$str $name</option>";
+                else
+                    echo "<option value='$id'>$str $name</option>";
                 self::cate_parent($data,$id,$str.'----');
             }
         }

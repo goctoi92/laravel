@@ -28,7 +28,7 @@
                     <th>name</th>
                     <th>parent</th>
                     <th>description</th>
-                    <th>Option</th>
+                    <th> </th>
                 </tr>
                 </thead>
                 <tbody>

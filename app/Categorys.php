@@ -30,4 +30,17 @@ class Categorys extends Model
         $category->description = $request->input('inputDescription');
         $category->save();
     }
+
+    /**
+     * @param Request $request
+     */
+    public function editCate(Categorys $category,Request $request){
+        $category->name = $request->input('inputName');
+        $category->alias = \Lib\Text::rewriteTitle($request->input('inputAlias'));
+        $category->order = $request->input('inputOrder');
+        $category->parent_id = $request->input('inputParent');
+        $category->keyword = $request->input('inputKeyword');
+        $category->description = $request->input('inputDescription');
+        $category->save();
+    }
 }

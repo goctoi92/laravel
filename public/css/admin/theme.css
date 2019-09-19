@@ -3699,6 +3699,13 @@ section {
   border-bottom: none;
 }
 
+.main-content .alert {
+  position: absolute;
+  right: 50px;
+  width: 50%;
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
   .table-responsive-data2 {
     overflow: visible;
