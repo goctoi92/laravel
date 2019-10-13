@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6275,9 +6275,9 @@ module.exports = {
 /***/ }),
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css":
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./public/css/application/index.css ***!
-  \**************************************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--10-1!./node_modules/postcss-loader/src??ref--10-2!./public/css/application/index.css ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6286,7 +6286,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".col-md-4 {\n  flex: 0 0 32.3333333333%;\n  max-width: 32.3333333333%;\n}\n\n.col-md-8 {\n  flex: 0 0 65.6666666667%;\n  max-width: 65.6666666667%;\n}\n\n.row {\n  margin: 0;\n}\n\n.feed-item {\n  margin: 5px;\n  border-radius: 3px;\n  overflow: hidden;\n}\n\n.feed-item .title-news {\n  font-size: 18px;\n}\n\n.feed-item .sort-desc {\n  font-size: 14px;\n}\n\n.feed-item .section-option .source_title {\n  font-size: 14px;\n  line-height: 19px;\n  letter-spacing: 1px;\n}\n\n", ""]);
+exports.push([module.i, ".row {\n  margin: 0;\n}\n\n.box-items.col-md-4 {\n  padding: 5px;\n}\n\n.box-items.col-md-8 {\n  padding: 5px;\n}\n\n.feed-item {\n  border-radius: 3px;\n  overflow: hidden;\n  height: 100%;\n  border: none;\n}\n\n.feed-item p,\n.feed-item span {\n  color: #FFFFFF;\n}\n\n.feed-item .img-news {\n  padding-bottom: 145px;\n}\n\n.feed-item .img-news img {\n  width: 100%;\n}\n\n.feed-item .shade-mask {\n  background-image: linear-gradient(transparent 0%, #000 38%);\n  width: 100%;\n  height: 77%;\n  position: absolute;\n  bottom: 0;\n}\n\n.feed-item .doc-info {\n  position: absolute;\n  bottom: 0;\n  z-index: 999;\n}\n\n.feed-item .doc-info .title-news {\n  font-size: 20px;\n  font-weight: bold;\n}\n\n.feed-item .doc-info .sort-desc {\n  font-size: 14px;\n}\n\n.feed-item .section-option .source_title {\n  font-size: 14px;\n  line-height: 19px;\n  letter-spacing: 1px;\n  margin-bottom: 0;\n}\n\n.feed-item .section-option span i {\n  margin-left: 10px;\n}\n\n.col-md-8 .img-news {\n  padding-bottom: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -66723,7 +66723,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--10-1!../../../node_modules/postcss-loader/src??ref--10-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -66765,9 +66765,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./components/Item_News */ "./resources/js/components/Item_News.js");
+__webpack_require__(/*! ./components/Menu */ "./resources/js/components/Menu.js");
 
-__webpack_require__(/*! ./components/Search_Section */ "./resources/js/components/Search_Section.js");
+__webpack_require__(/*! ./components/Item_News */ "./resources/js/components/Item_News.js");
 
 /***/ }),
 
@@ -66949,18 +66949,35 @@ function (_Component) {
     key: "render",
     value: function render() {
       var indents = [];
+      var _temp = 3;
+      var _tempPlus = 3;
+      var _col = 4;
+      var arrColor = [["#ffffff", "#3f4d2f"], ["#ffffff", "#29282f"], ["#ffffff", "#4c5b5a"], ["#000000", "#c6947e"], ["#000000", "#f2f2f2"], ["#000000", "#d6c658"]];
 
       for (var i = 0; i < 50; i++) {
+        var random = Math.floor(Math.random() * 6);
+        if (i === _temp) _col = 8;
         indents.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "col-md-4 card feed-item",
-          key: i
+          key: i,
+          className: "box-items col-md-" + _col
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          "data-col": _col,
+          className: "card feed-item "
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          title: "C\xE2y ng\u1ECDc ng\xE2n t\xE1c d\u1EE5ng"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "img-news card-img-top"
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "doc-info card-body"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "img-fluid",
+          src: "/images/application/smart_crop_516x290.webp"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          "data-color": arrColor[random][1],
           className: "shade-mask"
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          "data-color": arrColor[random][0],
+          className: "doc-info card-body"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "title-news card-title"
         }, "C\xE2y ng\u1ECDc ng\xE2n t\xE1c d\u1EE5ng v\xE0 \xFD ngh\u0129a ti\u1EC1n b\u1EA1c r\u1EE7ng r\u1EC9nh"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "sort-desc card-text"
@@ -66970,7 +66987,19 @@ function (_Component) {
           className: "source_title"
         }, "EVA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "2100", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "fa fa-eye"
-        }))))));
+        }))))))));
+
+        if (_col === 8) {
+          _col = 4;
+
+          if (_tempPlus === 3) {
+            _temp += _tempPlus;
+            _tempPlus = 4;
+          } else {
+            _temp += _tempPlus;
+            _tempPlus = 3;
+          }
+        }
       }
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66990,20 +67019,22 @@ if (document.getElementById('main-content')) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Search_Section.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/Search_Section.js ***!
-  \***************************************************/
+/***/ "./resources/js/components/Menu.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/Menu.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Search_Section; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Menu; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _typeof(obj) {
@@ -67092,51 +67123,104 @@ function _setPrototypeOf(o, p) {
 
 
 
-var Search_Section =
+
+var Menu =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Search_Section, _Component);
+  _inherits(Menu, _Component);
 
-  function Search_Section() {
-    _classCallCheck(this, Search_Section);
+  function Menu() {
+    var _this;
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Search_Section).apply(this, arguments));
+    _classCallCheck(this, Menu);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Menu).call(this));
+    _this.state = {
+      category: []
+    };
+    return _this;
   }
 
-  _createClass(Search_Section, [{
+  _createClass(Menu, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/category').then(function (response) {
+        _this2.setState({
+          category: response.data
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-12"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "navbar navbar-expand-lg navbar-light bg-white"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        title: "B\xF3ng \u0111\xE1 365",
+        className: "navbar-brand",
+        href: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "img-fluid img-logo",
+        src: "/images/application/my-logo-365.png",
+        alt: "B\xF3ng \u0111\xE1 365"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-toggle": "collapse",
+        "data-target": "#navbarNews",
+        "aria-controls": "navbarNews",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "navbar-toggler-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "collapse navbar-collapse",
+        id: "navbarNews"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "navbar-nav"
+      }, this.state.category.map(function (cate, i) {
+        var url = "/bong-da/" + cate.alias;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: i,
+          className: "nav-item"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          title: cate.name,
+          className: "nav-link",
+          href: url
+        }, cate.name));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "input-group table-wrapper position-relative menu-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-group mb-2"
+        className: "input-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "form-control",
-        id: "txt-search",
-        placeholder: "T\xECm b\xE0i vi\u1EBFt!"
+        id: "inlineFormInputGroup",
+        placeholder: "T\xECm ki\u1EBFm"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-group-prepend"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-group-text"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-search"
-      })))));
+      })))))));
     }
   }]);
 
-  return Search_Section;
+  return Menu;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
 
-if (document.getElementById('section-search')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Search_Section, null), document.getElementById('section-search'));
+if (document.getElementById('section-menu')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Menu, null), document.getElementById('section-menu'));
 }
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./resources/js/app.js ***!
   \***********************************/

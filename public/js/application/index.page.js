@@ -127,8 +127,15 @@ function () {
   _createClass(index, [{
     key: "view",
     value: function view() {
-      document.on('click', function (event) {
-        alert('aaaaaaaaa');
+      var $shadeMask = $(".shade-mask");
+      var $docInfo = $(".doc-info");
+      $shadeMask.each(function (i, obj) {
+        var bg = "linear-gradient(transparent 0%, " + $(obj).data("color") + " 38%)";
+        $(obj).css("background-image", bg);
+      });
+      $docInfo.each(function (i, obj) {
+        $(obj).find("p").css("color", $(obj).data("color"));
+        $(obj).find("span").css("color", $(obj).data("color"));
       });
     }
   }]);
@@ -173,16 +180,28 @@ new index();
 
 /***/ }),
 
+/***/ "./resources/sass/page/menu.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/page/menu.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!********************************************************************************************************************************************!*\
-  !*** multi ./resources/js/page/index.page.js ./resources/sass/app.scss ./resources/sass/page/index.scss ./resources/sass/admin/theme.scss ***!
-  \********************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/page/index.page.js ./resources/sass/app.scss ./resources/sass/page/index.scss ./resources/sass/page/menu.scss ./resources/sass/admin/theme.scss ***!
+  \****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\page\index.page.js */"./resources/js/page/index.page.js");
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\index.scss */"./resources/sass/page/index.scss");
+__webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\menu.scss */"./resources/sass/page/menu.scss");
 module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\admin\theme.scss */"./resources/sass/admin/theme.scss");
 
 

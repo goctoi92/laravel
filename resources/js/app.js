@@ -12,5 +12,7 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+require('./components/Menu');
 require('./components/Item_News');
-require('./components/Search_Section');
+
+

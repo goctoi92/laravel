@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Categorys;
+use function foo\func;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 

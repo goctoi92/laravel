@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',['uses' => 'Application\IndexController@indexAction']);
+
+Route::group(['prefix'=>'bong-da'],function(){
+    Route::get('/',['uses' => 'Application\IndexController@indexAction']);
+
+    Route::get('/{category}',['uses' => 'Application\CategoryController@indexAction']);
 });
 
 Route::group(['prefix'=>'admin','middleware' => 'auth'],function(){

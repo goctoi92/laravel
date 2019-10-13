@@ -1,6 +1,5 @@
 @extends('application.master')
 @section('content')
-
-    <div id="main-content"></div>
-
+    aaaa <p>{{$category}}</p>
 @stop
+

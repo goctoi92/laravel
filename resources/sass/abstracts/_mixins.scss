@@ -19,18 +19,7 @@
     @return $value;
 }
 
-@mixin rem-font-size($pixels, $font-weight: null, $line-height: null) {
-    font-size: strip-unit($pixels) + px;
-    font-size: to-rem($pixels);
 
-    @if $font-weight != null {
-        font-weight: $font-weight;
-    }
-
-    @if $line-height != null {
-        line-height: to-rem($line-height);
-    }
-}
 
 @mixin st-transform-translate($x, $y) {
     -webkit-transform: translate($x, $y);

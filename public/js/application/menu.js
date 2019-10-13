@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/admin/myscript.js":
-/*!****************************************!*\
-  !*** ./resources/js/admin/myscript.js ***!
-  \****************************************/
+/***/ "./resources/js/page/common/menu.js":
+/*!******************************************!*\
+  !*** ./resources/js/page/common/menu.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -115,43 +115,55 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
-var MyScript =
+var menu =
 /*#__PURE__*/
 function () {
-  function MyScript() {
-    _classCallCheck(this, MyScript);
+  function menu() {
+    _classCallCheck(this, menu);
 
-    this._init();
+    this._initHeader();
   }
 
-  _createClass(MyScript, [{
-    key: "_init",
-    value: function _init() {
-      var $myAlert = $('.alert');
-      var $itemDelete = $('.item-delete');
-      $myAlert.fadeOut(4000);
-      $itemDelete.click(function () {
-        if (window.confirm('Are you sure delete it.??')) return true;
-        return false;
+  _createClass(menu, [{
+    key: "_initHeader",
+    value: function _initHeader() {
+      var $header = $("#section-menu");
+
+      var headerFixed = function headerFixed() {
+        $header.addClass("head-fixed-top");
+        setTimeout(function () {
+          $header.addClass("sticky");
+        }, 100);
+      }; // set class menu when scroll
+
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 20 && !$header.hasClass('head-fixed-top')) {
+          headerFixed();
+        }
+
+        if ($(this).scrollTop() < 20) {
+          $header.removeClass("head-fixed-top sticky");
+        }
       });
     }
   }]);
 
-  return MyScript;
+  return menu;
 }();
 
-new MyScript();
+new menu();
 
 /***/ }),
 
-/***/ 3:
-/*!**********************************************!*\
-  !*** multi ./resources/js/admin/myscript.js ***!
-  \**********************************************/
+/***/ 1:
+/*!************************************************!*\
+  !*** multi ./resources/js/page/common/menu.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\admin\myscript.js */"./resources/js/admin/myscript.js");
+module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\page\common\menu.js */"./resources/js/page/common/menu.js");
 
 
 /***/ })
