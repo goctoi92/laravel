@@ -35,6 +35,10 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'],function(){
         Route::get('/edit/{id}',['as' => 'admin.category.getEdit','uses' => 'Auth\CategoryController@editAction']);
         Route::post('/edit/{id}',['as' => 'admin.category.postEdit','uses' => 'Auth\CategoryController@postEditAction']);
     });
+    Route::group(['prefix'=>'tool'],function(){
+        Route::get('/','Auth\ToolGetPostController@indexAction');
+        Route::get('/index',['as' => 'admin.tool.index','uses' => 'Auth\ToolGetPostController@indexAction']);
+    });
 
     Route::group(['prefix'=>'user'],function(){
         Route::get('/','Auth\UserController@indexAction');

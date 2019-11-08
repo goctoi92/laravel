@@ -10,13 +10,13 @@ export default class Item_News extends Component {
         let _col = 4;
         let arrColor = [
             ["#ffffff","#3f4d2f"],
-            ["#ffffff","#29282f"],
+            ["#ffffff","#4c1e08"],
             ["#ffffff","#4c5b5a"],
             ["#000000","#c6947e"],
             ["#000000","#f2f2f2"],
             ["#000000","#d6c658"],
         ];
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 49; i++) {
             let random = Math.floor(Math.random() * 6);
             if (i === _temp)
                 _col = 8;
@@ -27,7 +27,7 @@ export default class Item_News extends Component {
                             <div className="img-news card-img-top">
                                 <img className="img-fluid" src={"/images/application/smart_crop_516x290.webp"}/>
                             </div>
-                            <div data-color={arrColor[random][1]} className="shade-mask"></div>
+                            <div data-col={_col} data-color={arrColor[random][1]} className="shade-mask"></div>
                             <div data-color={arrColor[random][0]} className="doc-info card-body">
                                 <p className="title-news card-title">Cây ngọc ngân tác dụng và ý nghĩa tiền bạc rủng
                                     rỉnh</p>

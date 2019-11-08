@@ -6286,7 +6286,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".row {\n  margin: 0;\n}\n\n.box-items.col-md-4 {\n  padding: 5px;\n}\n\n.box-items.col-md-8 {\n  padding: 5px;\n}\n\n.feed-item {\n  border-radius: 3px;\n  overflow: hidden;\n  height: 100%;\n  border: none;\n}\n\n.feed-item p,\n.feed-item span {\n  color: #FFFFFF;\n}\n\n.feed-item .img-news {\n  padding-bottom: 145px;\n}\n\n.feed-item .img-news img {\n  width: 100%;\n}\n\n.feed-item .shade-mask {\n  background-image: linear-gradient(transparent 0%, #000 38%);\n  width: 100%;\n  height: 77%;\n  position: absolute;\n  bottom: 0;\n}\n\n.feed-item .doc-info {\n  position: absolute;\n  bottom: 0;\n  z-index: 999;\n}\n\n.feed-item .doc-info .title-news {\n  font-size: 20px;\n  font-weight: bold;\n}\n\n.feed-item .doc-info .sort-desc {\n  font-size: 14px;\n}\n\n.feed-item .section-option .source_title {\n  font-size: 14px;\n  line-height: 19px;\n  letter-spacing: 1px;\n  margin-bottom: 0;\n}\n\n.feed-item .section-option span i {\n  margin-left: 10px;\n}\n\n.col-md-8 .img-news {\n  padding-bottom: 0;\n}\n\n", ""]);
+exports.push([module.i, ".row {\n  margin: 0;\n}\n\n.box-items.col-md-4 {\n  padding: 5px;\n}\n\n.box-items.col-md-8 {\n  padding: 5px;\n}\n\n.feed-item {\n  border-radius: 3px;\n  overflow: hidden;\n  height: 100%;\n  border: none;\n}\n\n.feed-item p,\n.feed-item span {\n  color: #FFFFFF;\n}\n\n.feed-item .img-news {\n  padding-bottom: 145px;\n}\n\n.feed-item .img-news img {\n  width: 100%;\n}\n\n.feed-item .shade-mask {\n  width: 100%;\n  height: 77%;\n  position: absolute;\n  bottom: 0;\n}\n\n.feed-item .doc-info {\n  position: absolute;\n  bottom: 0;\n  z-index: 999;\n}\n\n.feed-item .doc-info .title-news {\n  font-size: 20px;\n  font-weight: bold;\n}\n\n.feed-item .doc-info .sort-desc {\n  font-size: 14px;\n}\n\n.feed-item .section-option {\n  display: flex;\n  align-items: baseline;\n}\n\n.feed-item .section-option .source_title {\n  font-size: 14px;\n  line-height: 19px;\n  letter-spacing: 1px;\n  margin-bottom: 0;\n  font-weight: bold;\n}\n\n.feed-item .section-option span {\n  margin: auto;\n}\n\n.feed-item .section-option span i {\n  margin-left: 10px;\n}\n\n.col-md-8 .img-news {\n  padding-bottom: 0;\n}\n\n.col-md-8 a {\n  height: 100%;\n}\n\n.col-md-8 .img-news {\n  padding-bottom: 0;\n  width: 50%;\n  float: right;\n  height: 100%;\n}\n\n@media screen and (max-width: 500px) {\n  .col-md-8 .img-news {\n    width: 100%;\n    float: unset;\n    padding-bottom: 145px;\n  }\n}\n\n.col-md-8 img.img-fluid {\n  height: 100%;\n}\n\n.col-md-8 .shade-mask {\n  width: 62%;\n  height: 100%;\n}\n\n@media screen and (max-width: 500px) {\n  .col-md-8 .shade-mask {\n    width: 100%;\n    background-image: linear-gradient(transparent 0%, #000 38%);\n  }\n}\n\n.col-md-8 .doc-info.card-body {\n  width: 50%;\n  float: left;\n}\n\n@media screen and (max-width: 500px) {\n  .col-md-8 .doc-info.card-body {\n    width: 100%;\n  }\n}\n\n", ""]);
 
 // exports
 
@@ -66952,9 +66952,9 @@ function (_Component) {
       var _temp = 3;
       var _tempPlus = 3;
       var _col = 4;
-      var arrColor = [["#ffffff", "#3f4d2f"], ["#ffffff", "#29282f"], ["#ffffff", "#4c5b5a"], ["#000000", "#c6947e"], ["#000000", "#f2f2f2"], ["#000000", "#d6c658"]];
+      var arrColor = [["#ffffff", "#3f4d2f"], ["#ffffff", "#4c1e08"], ["#ffffff", "#4c5b5a"], ["#000000", "#c6947e"], ["#000000", "#f2f2f2"], ["#000000", "#d6c658"]];
 
-      for (var i = 0; i < 50; i++) {
+      for (var i = 0; i < 49; i++) {
         var random = Math.floor(Math.random() * 6);
         if (i === _temp) _col = 8;
         indents.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66972,6 +66972,7 @@ function (_Component) {
           className: "img-fluid",
           src: "/images/application/smart_crop_516x290.webp"
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          "data-col": _col,
           "data-color": arrColor[random][1],
           className: "shade-mask"
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

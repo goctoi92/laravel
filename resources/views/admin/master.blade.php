@@ -54,7 +54,7 @@
                     </li>
                     <li class="has-sub">
                         <a class="js-arrow" href="#">
-                            <i class="fa fa-list"></i>User</a>
+                            <i class="fa fa-user"></i>User</a>
                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                             <li>
                                 <a href='{!! route('admin.user.list') !!}'>List</a>
@@ -65,8 +65,8 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="form.html">
-                            <i class="fa fa-check-square"></i>Forms</a>
+                        <a href='{!! route('admin.tool.index') !!}'>
+                            <i class="fa fa-copy"></i>Tool copy post</a>
                     </li>
                     <li>
                         <a href="#">

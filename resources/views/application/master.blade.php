@@ -5,13 +5,13 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Bóng đá 365 - Trang chuyên tin bóng đá 365">
+    <meta name="description" content="{{$description}}">
     <meta name="author" content="Hieu Nguyen">
-    <meta name="keywords" content="Bóng đá 365,tin bóng đá 365,thể thao việt nam, bóng đá trong nước, ">
+    <meta name="keywords" content="{{$keyword}}">
     <meta name="csrf-token" content="{!! csrf_token() !!}">
-
+    <link rel="shortcut icon" href="/images/application/my-logo-365.png">
     <!-- Title Page-->
-    <title>Bóng đá 365 - Trang chuyên tin bóng đá 365</title>
+    <title>{{$title}}</title>
     <!-- Main CSS-->
     <link href="/css/app.css" rel="stylesheet" media="all">
     <link href="/fonts/font-awesome.css" rel="stylesheet" media="all">
