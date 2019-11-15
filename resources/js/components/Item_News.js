@@ -16,7 +16,7 @@ export default class Item_News extends Component {
             ["#000000","#f2f2f2"],
             ["#000000","#d6c658"],
         ];
-        for (let i = 0; i < 49; i++) {
+        for (let i = 0; i < 10; i++) {
             let random = Math.floor(Math.random() * 6);
             if (i === _temp)
                 _col = 8;
@@ -29,12 +29,9 @@ export default class Item_News extends Component {
                             </div>
                             <div data-col={_col} data-color={arrColor[random][1]} className="shade-mask"></div>
                             <div data-color={arrColor[random][0]} className="doc-info card-body">
-                                <p className="title-news card-title">Cây ngọc ngân tác dụng và ý nghĩa tiền bạc rủng
-                                    rỉnh</p>
+                                <p className="title-news card-title">Cây ngọc ngân tác dụng và ý nghĩa tiền</p>
                                 <p className="sort-desc card-text">Cây ngọc ngân lá xanh mượt, phát triển nhanh lại ít sâu
-                                    bệnh là một trong những
-                                    loại cây cảnh dễ trồng để trong nhà, để bàn làm việc, trang trí nội thất, cây văn
-                                    phòng</p>
+                                    bệnh là một trong những loại cây cảnh dễ trồng để trong nhà...</p>
                                 <div className="section-option">
                                     <p className="source_title">EVA</p>
                                     <span>2100<i className="fa fa-eye"></i></span>
@@ -67,4 +64,7 @@ export default class Item_News extends Component {
 
 if (document.getElementById('main-content')) {
     ReactDOM.render(<Item_News />, document.getElementById('main-content'));
+}
+if (document.getElementById('main-content-video')) {
+    ReactDOM.render(<Item_News />, document.getElementById('main-content-video'));
 }

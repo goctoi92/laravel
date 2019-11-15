@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,27 +13,22 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
+            $table->text('content');
             $table->string('alias');
-            $table->integer('price');
-            $table->text('intro');
-            $table->longText('content');
-            $table->string('image');
-            $table->string('keyword');
-            $table->string('description');
-
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')
-                ->references('id')->on('users')
-                ->onDelete('cascade');
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')
                 ->references('id')->on('categorys')
                 ->onDelete('cascade');
 
+            $table->integer('source_id');
+            $table->integer('status');
+            $table->integer('count_see');
+            $table->string('keyword');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -45,6 +40,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('posts');
     }
 }

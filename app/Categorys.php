@@ -13,8 +13,8 @@ class Categorys extends Model
     public $timestamps = true;
 
 
-    public function product(){
-        return $this->hasMany('App\Products');
+    public function posts(){
+        return $this->hasMany('App\Posts');
     }
 
     /**

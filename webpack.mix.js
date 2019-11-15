@@ -20,7 +20,8 @@ mix.react(dirJs + 'app.js', dirOutJs)
 mix.js(dirJs + 'page/index.page.js', dirOutJs + 'application')
     .js(dirJs + 'page/common/menu.js', dirOutJs + 'application')
     .sass(dirScss + 'page/index.scss', dirOutScss + 'application')
-    .sass(dirScss + 'page/menu.scss', dirOutScss + 'application');
+    .sass(dirScss + 'page/menu.scss', dirOutScss + 'application')
+    .sass(dirScss + 'page/main.scss', dirOutScss + 'application');
 
 /* -------------END CAU HINH CHO APPLICATION------------------ */
 

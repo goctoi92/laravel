@@ -18,7 +18,7 @@ export default class Menu extends Component{
     }
     render(){
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-white">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <a title="Bóng đá 365" className="navbar-brand" href="/">
                     <img className="img-fluid img-logo" src={"/images/application/my-logo-365.png"} alt="Bóng đá 365"/>
                 </a>
@@ -50,13 +50,11 @@ export default class Menu extends Component{
                         {/*</li>*/}
                     </ul>
                     <div className="input-group table-wrapper position-relative menu-right">
-                        <div className="input-group">
+
                             <input type="text" className="form-control" id="inlineFormInputGroup"
                                    placeholder="Tìm kiếm"/>
-                            <div className="input-group-prepend">
-                                <div className="input-group-text"><i className="fa fa-search"></i></div>
-                            </div>
-                        </div>
+                            <i className="fa fa-search"></i>
+
                     </div>
                 </div>
             </nav>

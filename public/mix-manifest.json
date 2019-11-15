@@ -6,6 +6,7 @@
     "/css/app.css": "/css/app.css",
     "/css/application/index.css": "/css/application/index.css",
     "/css/application/menu.css": "/css/application/menu.css",
+    "/css/application/main.css": "/css/application/main.css",
     "/css/admin/theme.css": "/css/admin/theme.css",
     "/js/application/menu.js": "/js/application/menu.js",
     "/js/jquery-3.2.1.min.js": "/js/jquery-3.2.1.min.js",

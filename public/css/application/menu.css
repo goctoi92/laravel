@@ -20,6 +20,12 @@
 }
 
 @media all and (max-width: 640px) {
+  .header .navbar {
+    background: #f7f7f7;
+  }
+}
+
+@media all and (max-width: 640px) {
   .header .navbar-brand {
     margin-left: 15px;
   }
@@ -66,7 +72,7 @@
 }
 
 .header #navbarNews {
-  background: #FFFFFF;
+  background: #f7f7f7;
   padding: 0 30px;
 }
 
@@ -148,15 +154,16 @@
   }
 }
 
-.header #navbarNews .menu-right .input-group-prepend {
-  margin-right: -1px;
-  cursor: pointer;
+.header #navbarNews .input-group input {
+  border-radius: 0.25rem;
 }
 
-.header #navbarNews .menu-right .input-group-prepend .input-group-text {
-  background: transparent;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+.header #navbarNews .input-group .fa {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  z-index: 99;
 }
 
 .header #navbarNews .dropdown-menu {

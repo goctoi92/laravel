@@ -38,6 +38,7 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'],function(){
     Route::group(['prefix'=>'tool'],function(){
         Route::get('/','Auth\ToolGetPostController@indexAction');
         Route::get('/index',['as' => 'admin.tool.index','uses' => 'Auth\ToolGetPostController@indexAction']);
+        Route::post('/index',['as' => 'admin.tool.indexPost','uses' => 'Auth\ToolGetPostController@indexPostAction']);
     });
 
     Route::group(['prefix'=>'user'],function(){

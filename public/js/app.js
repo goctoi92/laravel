@@ -6276,7 +6276,7 @@ module.exports = {
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css":
 /*!****************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--10-1!./node_modules/postcss-loader/src??ref--10-2!./public/css/application/index.css ***!
+  !*** ./node_modules/css-loader??ref--11-1!./node_modules/postcss-loader/src??ref--11-2!./public/css/application/index.css ***!
   \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -66723,7 +66723,7 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--10-1!../../../node_modules/postcss-loader/src??ref--10-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--11-1!../../../node_modules/postcss-loader/src??ref--11-2!./index.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./public/css/application/index.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -66954,7 +66954,7 @@ function (_Component) {
       var _col = 4;
       var arrColor = [["#ffffff", "#3f4d2f"], ["#ffffff", "#4c1e08"], ["#ffffff", "#4c5b5a"], ["#000000", "#c6947e"], ["#000000", "#f2f2f2"], ["#000000", "#d6c658"]];
 
-      for (var i = 0; i < 49; i++) {
+      for (var i = 0; i < 10; i++) {
         var random = Math.floor(Math.random() * 6);
         if (i === _temp) _col = 8;
         indents.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66980,9 +66980,9 @@ function (_Component) {
           className: "doc-info card-body"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "title-news card-title"
-        }, "C\xE2y ng\u1ECDc ng\xE2n t\xE1c d\u1EE5ng v\xE0 \xFD ngh\u0129a ti\u1EC1n b\u1EA1c r\u1EE7ng r\u1EC9nh"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        }, "C\xE2y ng\u1ECDc ng\xE2n t\xE1c d\u1EE5ng v\xE0 \xFD ngh\u0129a ti\u1EC1n"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "sort-desc card-text"
-        }, "C\xE2y ng\u1ECDc ng\xE2n l\xE1 xanh m\u01B0\u1EE3t, ph\xE1t tri\u1EC3n nhanh l\u1EA1i \xEDt s\xE2u b\u1EC7nh l\xE0 m\u1ED9t trong nh\u1EEFng lo\u1EA1i c\xE2y c\u1EA3nh d\u1EC5 tr\u1ED3ng \u0111\u1EC3 trong nh\xE0, \u0111\u1EC3 b\xE0n l\xE0m vi\u1EC7c, trang tr\xED n\u1ED9i th\u1EA5t, c\xE2y v\u0103n ph\xF2ng"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "C\xE2y ng\u1ECDc ng\xE2n l\xE1 xanh m\u01B0\u1EE3t, ph\xE1t tri\u1EC3n nhanh l\u1EA1i \xEDt s\xE2u b\u1EC7nh l\xE0 m\u1ED9t trong nh\u1EEFng lo\u1EA1i c\xE2y c\u1EA3nh d\u1EC5 tr\u1ED3ng \u0111\u1EC3 trong nh\xE0..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "section-option"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "source_title"
@@ -67016,6 +67016,10 @@ function (_Component) {
 
 if (document.getElementById('main-content')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Item_News, null), document.getElementById('main-content'));
+}
+
+if (document.getElementById('main-content-video')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Item_News, null), document.getElementById('main-content-video'));
 }
 
 /***/ }),
@@ -67157,7 +67161,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        className: "navbar navbar-expand-lg navbar-light bg-white"
+        className: "navbar navbar-expand-lg navbar-light"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         title: "B\xF3ng \u0111\xE1 365",
         className: "navbar-brand",
@@ -67193,20 +67197,14 @@ function (_Component) {
         }, cate.name));
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "input-group table-wrapper position-relative menu-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "form-control",
         id: "inlineFormInputGroup",
         placeholder: "T\xECm ki\u1EBFm"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-group-prepend"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "input-group-text"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-search"
-      })))))));
+      }))));
     }
   }]);
 

@@ -21,7 +21,7 @@
 <body>
     <div class="container">
         <div id="section-menu" class="row section-menu header"></div>
-        <div class="section-content">
+        <div class="section-content row">
             @yield('content')
         </div>
     </div>

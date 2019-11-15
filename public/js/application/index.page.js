@@ -188,6 +188,17 @@ new index();
 
 /***/ }),
 
+/***/ "./resources/sass/page/main.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/page/main.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/page/menu.scss":
 /*!***************************************!*\
   !*** ./resources/sass/page/menu.scss ***!
@@ -200,9 +211,9 @@ new index();
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/page/index.page.js ./resources/sass/app.scss ./resources/sass/page/index.scss ./resources/sass/page/menu.scss ./resources/sass/admin/theme.scss ***!
-  \****************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/page/index.page.js ./resources/sass/app.scss ./resources/sass/page/index.scss ./resources/sass/page/menu.scss ./resources/sass/page/main.scss ./resources/sass/admin/theme.scss ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -210,6 +221,7 @@ __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\js\page\index.
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\index.scss */"./resources/sass/page/index.scss");
 __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\menu.scss */"./resources/sass/page/menu.scss");
+__webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\page\main.scss */"./resources/sass/page/main.scss");
 module.exports = __webpack_require__(/*! D:\xampp\htdocs\virtual\laravel\resources\sass\admin\theme.scss */"./resources/sass/admin/theme.scss");
 
 
