@@ -17,15 +17,20 @@ class Posts extends Model
 
     public function addPost($request){
         $post = new Posts();
-        $post->name = $request['name']?? "Không lấy được data";
-        $post->content = $request['content']?? "Không lấy được data";
-        $post->alias = \Lib\Text::rewriteTitle($request['name']?? "Không lấy được data");
-        $post->category_id = $request['category_id'];
-        $post->source_id = $request['source_id'];
-        $post->status = $request['status'];
-        $post->count_see = $request['count_see'];
-        $post->keyword = $request['keyword']?? "Không lấy được data";
-        $post->description = $request['description']?? "Không lấy được data";
-        $post->save();
+
+        $check = Posts::select('id','name')->where('name',$request['name'])->first();
+        if ($check == null && strpos($request['content'], 'start video embed') == false)
+        {
+            $post->name = $request['name']?? "Không lấy được data";
+            $post->content = $request['content']?? "Không lấy được data";
+            $post->alias = \Lib\Text::rewriteTitle($request['name']?? "Không lấy được data");
+            $post->category_id = $request['category_id'];
+            $post->source_id = $request['source_id'];
+            $post->status = $request['status'];
+            $post->count_see = $request['count_see'];
+            $post->keyword = $request['keyword']?? "Không lấy được data";
+            $post->description = $request['description']?? "Không lấy được data";
+            $post->save();
+        }
     }
 }

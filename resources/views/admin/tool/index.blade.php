@@ -11,7 +11,8 @@
                 <div class="form-group row">
                     <div class="col-md-12 mt-2">
                         <input hidden placeholder="source" name="source" type="text" value="1"/>
-                        <input class="btn btn-success" name="submit" type="submit" value="Submit"/>
+                        <input class="btn btn-success btn-submit-tool-post" name="submit" type="submit" value="Submit"/>
+                        <i class="fa fa-spinner fa-pulse fa-fw icon-loading text-success d-none"></i>
                     </div>
                 </div>
             </form>

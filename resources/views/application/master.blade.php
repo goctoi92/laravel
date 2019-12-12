@@ -9,7 +9,7 @@
     <meta name="author" content="Hieu Nguyen">
     <meta name="keywords" content="{{$keyword}}">
     <meta name="csrf-token" content="{!! csrf_token() !!}">
-    <link rel="shortcut icon" href="/images/application/my-logo-365.png">
+    <link rel="shortcut icon" href="/images/application/icon.png">
     <!-- Title Page-->
     <title>{{$title}}</title>
     <!-- Main CSS-->

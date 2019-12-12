@@ -129,10 +129,16 @@ function () {
     value: function _init() {
       var $myAlert = $('.alert');
       var $itemDelete = $('.item-delete');
+      var $toolSubmit = $('.btn-submit-tool-post');
       $myAlert.fadeOut(4000);
       $itemDelete.click(function () {
         if (window.confirm('Are you sure delete it.??')) return true;
         return false;
+      });
+      $toolSubmit.click(function () {
+        console.log("nut click");
+        $(".btn-submit-tool-post").prop('disabled', true);
+        $(".icon-loading").removeClass("d-none");
       });
     }
   }]);
